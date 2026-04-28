@@ -1,0 +1,34 @@
+[
+  {
+    "name": "The Azure Estate",
+    "price": "$50,000,000",
+    "location": "Palm Jumeirah, Dubai",
+    "bhk": "6",
+    "sqft": "15,000",
+    "image": "assets/hero_villa_1777355946394.png"
+  },
+  {
+    "name": "Sapphire Skyline Villa",
+    "price": "$35,000,000",
+    "location": "Downtown Dubai",
+    "bhk": "5",
+    "sqft": "12,000",
+    "image": "assets/interior_living_1777355965074.png"
+  },
+  {
+    "name": "Emerald Oasis Retreat",
+    "price": "$42,000,000",
+    "location": "Emirates Hills, Dubai",
+    "bhk": "7",
+    "sqft": "18,500",
+    "image": "assets/interior_bedroom_1777355984061.png"
+  },
+  {
+    "name": "Golden Sands Mansion",
+    "price": "$60,000,000",
+    "location": "Jumeirah Bay Island",
+    "bhk": "8",
+    "sqft": "22,000",
+    "image": "assets/interior_bathroom_1777356000348.png"
+  }
+]

@@ -426,6 +426,111 @@ ul {
 }
 
 /* ====================================
+   FEATURED VILLAS
+==================================== */
+.villas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.villa-card {
+    background: var(--light-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: var(--transition);
+}
+
+.villa-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.villa-img-container {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.villa-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.villa-img-container:hover img {
+    transform: scale(1.1);
+}
+
+.villa-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.villa-details {
+    padding: 25px;
+}
+
+.villa-price {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.villa-name {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--dark-bg);
+}
+
+.villa-location {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.villa-stats {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-value {
+    font-weight: 600;
+    color: var(--dark-bg);
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* ====================================
    ABOUT SECTION
 ==================================== */
 .about-container {

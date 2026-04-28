@@ -8,6 +8,7 @@ AOS.init({
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Fetch Dynamic Data
     fetchData();
+    fetchProperties();
 
     // 2. Navigation Scroll Effect
     const navbar = document.getElementById('navbar');
@@ -47,16 +48,32 @@ document.addEventListener('DOMContentLoaded', () => {
     if (bookingForm) {
         bookingForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            // Simulate form submission to Formspree/EmailJS
             const submitBtn = bookingForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
-            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Processing...';
-            
-            setTimeout(() => {
-                submitBtn.innerHTML = originalText;
-                bookingForm.reset();
-                successPopup.classList.add('active');
-            }, 1500);
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+
+            // EmailJS Integration setup for samimmobile@gmail.com
+            // Ensure you create a Service and Template in EmailJS
+            const templateParams = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                date: document.getElementById('date').value,
+                time: document.getElementById('time').value,
+                message: document.getElementById('message').value,
+                to_email: 'samimmobile@gmail.com'
+            };
+
+            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+                .then(function(response) {
+                    submitBtn.innerHTML = originalText;
+                    bookingForm.reset();
+                    successPopup.classList.add('active');
+                }, function(error) {
+                    submitBtn.innerHTML = originalText;
+                    alert('Failed to send request. Please try again.');
+                    console.error('EmailJS Error:', error);
+                });
         });
     }
 
@@ -71,6 +88,56 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// Fetch Multiple Properties
+async function fetchProperties() {
+    try {
+        const response = await fetch('properties.json');
+        const properties = await response.json();
+        
+        const villasGrid = document.getElementById('villas-grid');
+        if (!villasGrid) return;
+        
+        properties.forEach((villa, index) => {
+            const delay = index * 100;
+            // The WhatsApp message template
+            const message = encodeURIComponent(`Hi Samim, I am interested in ${villa.name}. Can we schedule a visit?`);
+            // Add your WhatsApp number here (e.g. 919876543210)
+            const whatsappLink = `https://wa.me/1234567890?text=${message}`; 
+            
+            villasGrid.innerHTML += `
+                <div class="villa-card" data-aos="fade-up" data-aos-delay="${delay}">
+                    <div class="villa-img-container" onclick="openPropertyLightbox('${villa.image}')">
+                        <div class="villa-badge">For Sale</div>
+                        <img src="${villa.image}" alt="${villa.name}" loading="lazy">
+                    </div>
+                    <div class="villa-details">
+                        <div class="villa-price">${villa.price}</div>
+                        <h3 class="villa-name">${villa.name}</h3>
+                        <div class="villa-location">
+                            <i class="fa-solid fa-location-dot"></i> ${villa.location}
+                        </div>
+                        <div class="villa-stats">
+                            <div class="stat">
+                                <span class="stat-value">${villa.bhk}</span>
+                                <span class="stat-label">BHK</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">${villa.sqft}</span>
+                                <span class="stat-label">Sqft</span>
+                            </div>
+                        </div>
+                        <a href="${whatsappLink}" target="_blank" class="btn btn-whatsapp btn-block" style="margin-top: 15px;">
+                            <i class="fa-brands fa-whatsapp"></i> Schedule a Visit
+                        </a>
+                    </div>
+                </div>
+            `;
+        });
+    } catch (error) {
+        console.error('Error fetching properties:', error);
+    }
+}
 
 // Fetch Property Data
 async function fetchData() {
@@ -166,7 +233,24 @@ function initLightbox(images) {
 function openLightbox(index) {
     currentImageIndex = index;
     const lightbox = document.getElementById('lightbox');
+    
+    // Show arrows for gallery
+    document.querySelector('.lightbox-prev').style.display = 'block';
+    document.querySelector('.lightbox-next').style.display = 'block';
+    
     updateLightboxImage();
+    lightbox.classList.add('active');
+}
+
+function openPropertyLightbox(imgSrc) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    
+    // Hide arrows for single image preview
+    document.querySelector('.lightbox-prev').style.display = 'none';
+    document.querySelector('.lightbox-next').style.display = 'none';
+    
+    lightboxImg.src = imgSrc;
     lightbox.classList.add('active');
 }
 

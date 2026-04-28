@@ -30,6 +30,7 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#overview">Overview</a></li>
+                <li><a href="#villas">Villas</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#amenities">Amenities</a></li>
                 <li><a href="#location">Location</a></li>
@@ -49,6 +50,7 @@
         <ul class="mobile-nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#overview">Overview</a></li>
+            <li><a href="#villas">Villas</a></li>
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#amenities">Amenities</a></li>
             <li><a href="#location">Location</a></li>
@@ -87,6 +89,19 @@
                 <div class="divider"></div>
             </div>
             <div class="overview-grid" id="overview-grid" data-aos="fade-up" data-aos-delay="200">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Villas -->
+    <section id="villas" class="section villas-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Featured Properties</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="villas-grid" id="villas-grid">
                 <!-- Injected via JS -->
             </div>
         </div>
@@ -359,6 +374,13 @@
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            // NOTE: Replace with your actual EmailJS Public Key
+            emailjs.init("YOUR_PUBLIC_KEY");
+        })();
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
