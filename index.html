@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Villa Dubai | Premium Real Estate</title>
+    <meta name="description" content="Exclusive modern villa crafted for comfort, prestige, and elegance. Book a private tour today.">
+    <meta name="keywords" content="Luxury villa Dubai, Luxury home for sale USA, Modern villa with pool, Premium real estate property, Book villa tour">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sticky Navigation Bar -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">LUXURIA</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#amenities">Amenities</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="btn btn-primary nav-cta">Book a Tour</a>
+            
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-menu">
+        <div class="close-menu"><i class="fa-solid fa-xmark"></i></div>
+        <ul class="mobile-nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#amenities">Amenities</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- 1. Full Screen Hero Video / Slider (Using high-res image as requested) -->
+    <header id="home" class="hero" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(30,30,30,0.9)), url('assets/hero_villa_1777355946394.png');">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1200">
+            <div class="exclusive-badge">Exclusive Listing</div>
+            <h1 class="hero-title">Experience Luxury Living</h1>
+            <p class="hero-subtitle">Exclusive modern villa crafted for comfort, prestige, and elegance.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Book a Tour</a>
+                <a href="#gallery" class="btn btn-outline">View Gallery</a>
+                <a href="https://wa.me/1234567890" target="_blank" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp Inquiry</a>
+            </div>
+            
+            <div class="hero-price-tag">
+                <span class="price-label">Offered at</span>
+                <span id="dynamic-price" class="price-value">$50,000,000</span>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <span>Scroll to explore</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <!-- 3. Property Overview Section -->
+    <section id="overview" class="section overview-section bg-dark">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Property Overview</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="overview-grid" id="overview-grid" data-aos="fade-up" data-aos-delay="200">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. About the Property -->
+    <section id="about" class="section about-section">
+        <div class="container about-container">
+            <div class="about-content" data-aos="fade-right">
+                <h2>The Pinnacle of Elite Lifestyle</h2>
+                <div class="divider-left"></div>
+                <p>
+                    Nestled in a prime location, this million-dollar estate redefines modern architecture with an emphasis on natural sunlight, utmost privacy, and premium materials. 
+                </p>
+                <p>
+                    Every detail has been meticulously crafted to offer an elite lifestyle. From the grand double-height ceilings to the imported marble finishes, this villa seamlessly blends indoor and outdoor living, providing the ultimate sanctuary for those who appreciate true luxury.
+                </p>
+                <div class="limited-availability">
+                    <i class="fa-solid fa-clock"></i> Limited Availability - Premium Buyer Choice
+                </div>
+            </div>
+            <div class="about-image" data-aos="fade-left">
+                <img src="assets/interior_living_1777355965074.png" alt="Luxury Villa Interior" class="lazy">
+                <div class="glass-float-card">
+                    <i class="fa-solid fa-award"></i>
+                    <span>Award Winning Design</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Amenities Section -->
+    <section id="amenities" class="section amenities-section bg-dark">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>World-Class Amenities</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="amenities-grid" id="amenities-grid">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Interactive Photo Gallery -->
+    <section id="gallery" class="section gallery-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Interactive Gallery</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="gallery-masonry" id="gallery-container">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <button class="lightbox-prev"><i class="fa-solid fa-chevron-left"></i></button>
+        <img class="lightbox-content" id="lightbox-img">
+        <button class="lightbox-next"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <!-- 7. About the Area -->
+    <section id="location" class="section location-section bg-dark">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Prime Location</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="location-wrapper">
+                <div class="location-map" data-aos="zoom-in">
+                    <!-- Google Map Placeholder -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115456.96024103276!2d55.109506649866946!3d25.07628044810793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f1389e63e2621%3A0x6b7dbf07971b48b5!2sPalm%20Jumeirah%20-%20Dubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sus!4v1698248598912!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="location-details" data-aos="fade-left">
+                    <ul class="nearby-list">
+                        <li>
+                            <div class="icon-box"><i class="fa-solid fa-plane-departure"></i></div>
+                            <div class="text">
+                                <h4>International Airport</h4>
+                                <span>15 mins drive</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-box"><i class="fa-solid fa-bag-shopping"></i></div>
+                            <div class="text">
+                                <h4>Luxury Shopping Mall</h4>
+                                <span>5 mins drive</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-box"><i class="fa-solid fa-umbrella-beach"></i></div>
+                            <div class="text">
+                                <h4>Private Beach Access</h4>
+                                <span>Walking distance</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-box"><i class="fa-solid fa-city"></i></div>
+                            <div class="text">
+                                <h4>Downtown</h4>
+                                <span>20 mins drive</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <div class="text">
+                                <h4>Elite International Schools</h4>
+                                <span>10 mins drive</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Schedule a Visit Form -->
+    <section id="contact" class="section contact-section">
+        <div class="container contact-container">
+            <div class="contact-info" data-aos="fade-right">
+                <h2>Book a Private Tour Today</h2>
+                <div class="divider-left"></div>
+                <p>Experience the sheer elegance of this masterpiece in person. Schedule a private viewing with our luxury real estate specialists.</p>
+                
+                <div class="contact-methods">
+                    <div class="method">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+1 (800) 123-LUXE</span>
+                    </div>
+                    <div class="method">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>vip@luxuria-estate.com</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form-wrapper" data-aos="fade-left">
+                <!-- Using Formspree endpoint placeholder -->
+                <form id="booking-form" action="https://formspree.io/f/placeholder" method="POST" class="premium-form">
+                    <div class="form-group">
+                        <input type="text" name="name" id="name" required placeholder=" ">
+                        <label for="name">Full Name</label>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="email" name="email" id="email" required placeholder=" ">
+                            <label for="email">Email Address</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" id="phone" required placeholder=" ">
+                            <label for="phone">Phone Number</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="date" name="date" id="date" required>
+                            <label for="date" class="active">Preferred Date</label>
+                        </div>
+                        <div class="form-group">
+                            <select name="time" id="time" required>
+                                <option value="" disabled selected>Select Time</option>
+                                <option value="Morning">Morning (9AM - 12PM)</option>
+                                <option value="Afternoon">Afternoon (12PM - 4PM)</option>
+                                <option value="Evening">Evening (4PM - 7PM)</option>
+                            </select>
+                            <label for="time" class="active">Preferred Time</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea name="message" id="message" rows="4" required placeholder=" "></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block">Schedule Tour <i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Success Popup -->
+        <div id="success-popup" class="popup-overlay">
+            <div class="popup-content">
+                <i class="fa-solid fa-circle-check success-icon"></i>
+                <h3>Tour Request Sent Successfully</h3>
+                <p>Our luxury agent will contact you shortly to confirm your private viewing.</p>
+                <button class="btn btn-outline close-popup">Close</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Testimonials -->
+    <section class="section testimonials-section bg-dark">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>What Buyers Say</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <p>"Absolutely stunning property. The attention to detail in the architecture and interior design is truly unparalleled. A perfect sanctuary."</p>
+                    <div class="author">
+                        <h4>James R.</h4>
+                        <span>International Investor</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <p>"Perfect investment opportunity. The location is prime and the amenities surpass any 5-star resort I have visited."</p>
+                    <div class="author">
+                        <h4>Elena S.</h4>
+                        <span>CEO</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <p>"Luxury at its finest. From the infinity pool to the smart home features, every aspect of this villa screams premium living."</p>
+                    <div class="author">
+                        <h4>Michael T.</h4>
+                        <span>Real Estate Connoisseur</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. Final CTA Section -->
+    <section class="final-cta-section">
+        <div class="cta-overlay"></div>
+        <div class="container cta-content" data-aos="zoom-in">
+            <h2>Own the Lifestyle You Deserve</h2>
+            <p>Make this masterpiece your home. Let's make it happen.</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Schedule Tour</a>
+                <a href="tel:+18001230000" class="btn btn-outline-light">Contact Agent</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">LUXURIA</div>
+            <p>&copy; 2026 Luxuria Real Estate. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 10. Sticky Mobile Footer -->
+    <div class="mobile-sticky-footer">
+        <a href="https://wa.me/1234567890" target="_blank" class="mobile-action-btn whatsapp-btn">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="tel:+18001230000" class="mobile-action-btn call-btn">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+        <a href="#contact" class="mobile-action-btn book-btn">
+            Book Tour
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

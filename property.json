@@ -1,0 +1,29 @@
+{
+  "title": "The Azure Estate",
+  "price": "$50,000,000",
+  "overview": [
+    {"icon": "fa-bed", "text": "3 Bedrooms"},
+    {"icon": "fa-bath", "text": "2 Bathrooms"},
+    {"icon": "fa-ruler-combined", "text": "2500 Sqft"},
+    {"icon": "fa-swimming-pool", "text": "Private Pool"},
+    {"icon": "fa-warehouse", "text": "2 Car Garage"},
+    {"icon": "fa-home", "text": "Smart Home Enabled"}
+  ],
+  "address": "123 Palm Jumeirah, Dubai",
+  "images": [
+    "assets/interior_living_1777355965074.png",
+    "assets/interior_bedroom_1777355984061.png",
+    "assets/interior_bathroom_1777356000348.png",
+    "assets/hero_villa_1777355946394.png"
+  ],
+  "amenities": [
+    { "icon": "fa-swimming-pool", "name": "Infinity Swimming Pool" },
+    { "icon": "fa-dumbbell", "name": "Modern Gym" },
+    { "icon": "fa-car", "name": "Private Parking" },
+    { "icon": "fa-leaf", "name": "Garden Area" },
+    { "icon": "fa-film", "name": "Home Theater" },
+    { "icon": "fa-shield-halved", "name": "Smart Security" },
+    { "icon": "fa-martini-glass", "name": "Rooftop Lounge" },
+    { "icon": "fa-hot-tub-person", "name": "Spa Bathroom" }
+  ]
+}
